@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #f8f9fa; /* Light background for navbar */
+    padding: 10px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    gap: 20px; /* Space between navbar items */
+  }
+  
+  .navbar-item {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid transparent; /* Default border */
+    border-radius: 5px; /* Rounded corners */
+    color: #007bff; /* Text color */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .navbar-item:hover {
+    border: 2px solid blue; /* Blue outline on hover */
+  }
+  
+  .navbar-item:active,
+  .navbar-item:focus {
+    background-color: blue; /* Fill blue on click */
+    color: white; /* Change text color to white when active */
+  }
+  

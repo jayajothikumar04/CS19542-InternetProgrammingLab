@@ -5,6 +5,9 @@ import Tasks from './components/Tasks';
 import Home from './components/Home'; // Import the Home component
 import JournalEntryForm from './components/JournalEntryForm';
 import JournalEntries from './components/JournalEntries';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {

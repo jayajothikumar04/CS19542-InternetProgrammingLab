@@ -34,10 +34,10 @@ function JournalEntries() {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-4">
       <h2>Your Journal Entries</h2>
       <ul className="list-group">
-        {entries.map((entry) => (
+        {entries.sort((a, b) => new Date(b.date) - new Date(a.date)).map((entry) => (
           <li key={entry.id} className="list-group-item d-flex justify-content-between align-items-center">
             <div>
               <h5>{entry.title}</h5>

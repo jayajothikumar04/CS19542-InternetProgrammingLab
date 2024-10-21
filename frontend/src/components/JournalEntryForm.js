@@ -14,12 +14,12 @@ function JournalEntryForm({ onEntryAdded }) {
       alert('Entry added!');
       setTitle('');
       setContent('');
-      //onEntryAdded(); // Trigger refetch of journal entries
+      if (onEntryAdded) onEntryAdded(); // Trigger refetch of journal entries
     });
   };
 
   return (
-    <div className="container">
+    <div className="container mt-4">
       <h2>Add a Journal Entry</h2>
       <input 
         type="text" 

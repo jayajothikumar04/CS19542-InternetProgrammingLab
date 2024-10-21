@@ -6,6 +6,7 @@ import Home from './components/Home';
 import JournalEntryForm from './components/JournalEntryForm';
 import JournalEntries from './components/JournalEntries';
 import ExpenseTracker from './components/ExpenseTracker'; // Import ExpenseTracker
+import HabitTracker from './components/HabitTracker';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/view-entries" element={<JournalEntries />} />
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/expenses" element={<ExpenseTracker />} /> {/* Add Expense Tracker route */}
+          <Route path="/habit-tracker" element={<HabitTracker />} /> {/* Add this */}
         </Routes>
       </div>
     </Router>

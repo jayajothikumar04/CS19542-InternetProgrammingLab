@@ -110,6 +110,47 @@ app.delete('/delete-expense/:id', (req, res) => {
 });
 
 
+// Route to add a new habit
+app.post('/add-habit', (req, res) => {
+  const { habit_name, start_date, end_date } = req.body;
+  const sql = 'INSERT INTO habits (habit_name, start_date, end_date) VALUES (?, ?, ?)';
+  db.query(sql, [habit_name, start_date, end_date], (err, result) => {
+      if (err) throw err;
+      res.send('Habit added');
+  });
+});
+
+// Route to fetch all habits
+app.get('/habits', (req, res) => {
+  const sql = 'SELECT * FROM habits';
+  db.query(sql, (err, results) => {
+      if (err) throw err;
+      res.json(results);
+  });
+});
+
+// Route to update daily status of a habit
+app.put('/update-habit-status/:id', (req, res) => {
+  const { id } = req.params;
+  const { daily_status } = req.body;
+  const sql = 'UPDATE habits SET daily_status = ? WHERE id = ?';
+  db.query(sql, [daily_status, id], (err, result) => {
+      if (err) throw err;
+      res.send('Habit status updated');
+  });
+});
+
+// Route to delete a habit
+app.delete('/delete-habit/:id', (req, res) => {
+  const { id } = req.params;
+  const sql = 'DELETE FROM habits WHERE id = ?';
+  db.query(sql, [id], (err, result) => {
+      if (err) throw err;
+      res.send('Habit deleted');
+  });
+});
+
+
 
 // Start the server
 app.listen(3001, () => {

@@ -2,13 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Navbar from './components/Navbar';
 import Tasks from './components/Tasks';
-import Home from './components/Home'; // Import the Home component
+import Home from './components/Home';
 import JournalEntryForm from './components/JournalEntryForm';
 import JournalEntries from './components/JournalEntries';
+import ExpenseTracker from './components/ExpenseTracker'; // Import ExpenseTracker
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 function App() {
   return (
@@ -29,10 +28,11 @@ function App() {
         </div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Add Home route */}
+          <Route path="/" element={<Home />} />
           <Route path="/add-entry" element={<JournalEntryForm />} />
           <Route path="/view-entries" element={<JournalEntries />} />
           <Route path="/tasks" element={<Tasks />} />
+          <Route path="/expenses" element={<ExpenseTracker />} /> {/* Add Expense Tracker route */}
         </Routes>
       </div>
     </Router>
@@ -40,4 +40,3 @@ function App() {
 }
 
 export default App;
-

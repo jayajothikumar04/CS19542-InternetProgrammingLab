@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Ensure Bootstrap JS is imported
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Navbar() {
   return (
@@ -22,6 +21,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/tasks">Tasks</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/expenses">Expenses</Link> {/* Add Expenses link */}
             </li>
           </ul>
         </div>
